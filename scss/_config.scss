@@ -6,6 +6,7 @@
 
 $primary-color: #0F4C81;
 $secondary-color: #ED6663;
+$gradient: linear-gradient(to left,$primary-color,$secondary-color);
 
 .secondary {
   color: $secondary-color;

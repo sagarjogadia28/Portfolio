@@ -58,6 +58,59 @@ h4 {
   grid-template-columns: repeat(8, 1fr);
 }
 
+.nav-links {
+  display: none;
+}
+
+.hamburger-menu {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+.hamburger-menu span {
+  padding: 0.1rem 1.2rem;
+  background: linear-gradient(to left, #0F4C81, #ED6663);
+  margin: 0.4rem 0;
+  display: block;
+}
+
+#home {
+  position: relative;
+  min-height: 100vh;
+}
+
+.home-text {
+  text-align: center;
+  grid-column: 1/9;
+}
+
+.home-img {
+  margin-top: 4rem;
+  grid-column: 1/9;
+  text-align: center;
+}
+
+.lg-heading {
+  font-family: "Montserrat-Bold", sans-serif;
+  background: linear-gradient(to left, #0F4C81, #ED6663);
+  margin-top: 10rem;
+  font-size: 2.5rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sm-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  margin: 0.5rem 0 2rem 0;
+  letter-spacing: 4px;
+}
+
+.home-social a {
+  margin: 1rem;
+}
+
 @media screen and (min-width: 960px) {
   body {
     font-size: 18px;
