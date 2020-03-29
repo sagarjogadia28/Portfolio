@@ -1,0 +1,18 @@
+//small tablet style
+@media screen and (min-width: 620px){
+
+}
+
+//large tablet and laptop style
+@media screen and (min-width: 960px){
+  body{
+    font-size: 18px;
+  }
+}
+
+//desktop style
+@media screen and (min-width: 1200px){
+  body{
+    font-size: 20px;
+  }
+}
