@@ -1,0 +1,11 @@
+.skills-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  margin: auto;
+  grid-gap: 30px;
+
+  img{
+    justify-self: center;
+  }
+}

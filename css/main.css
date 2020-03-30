@@ -67,6 +67,7 @@ h4 {
   font-size: 1.2rem;
   font-family: "Montserrat-Bold", sans-serif;
   margin: 4rem 0;
+  text-align: center;
 }
 
 .page-heading::after {
@@ -220,6 +221,17 @@ h4 {
 #work-exp .companies h3 {
   font-family: "Montserrat-Bold", sans-serif;
   margin: 1.2rem 0 0.2rem 0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  margin: auto;
+  grid-gap: 30px;
+}
+.skills-grid img {
+  justify-self: center;
 }
 
 @media screen and (min-width: 960px) {
