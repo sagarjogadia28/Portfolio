@@ -58,6 +58,27 @@ h4 {
   grid-template-columns: repeat(8, 1fr);
 }
 
+.page-heading {
+  letter-spacing: 6px;
+  font-size: 1.2rem;
+  font-family: "Montserrat-Bold", sans-serif;
+  margin: 4rem 0;
+}
+
+.page-heading::after {
+  display: block;
+  content: "";
+  border-bottom: 4px solid #ED6663;
+  padding-top: 2px;
+  width: 5%;
+  transition: 0.5s;
+  margin: 0.5rem auto auto;
+}
+
+.page-heading:hover::after {
+  width: 15%;
+}
+
 .nav-links {
   display: none;
 }
@@ -83,6 +104,8 @@ h4 {
 .home-text {
   text-align: center;
   grid-column: 1/9;
+  width: 90%;
+  margin: auto;
 }
 
 .home-img {
@@ -109,6 +132,47 @@ h4 {
 
 .home-social a {
   margin: 1rem;
+}
+
+#about {
+  position: relative;
+  min-height: 100vh;
+}
+
+.about-text {
+  text-align: center;
+  grid-column: 1/9;
+  width: 90%;
+  margin: auto;
+}
+.about-text h1 {
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 2.4rem;
+  margin: 2rem 0;
+}
+.about-text p {
+  letter-spacing: 2px;
+  text-align: center;
+}
+.about-text input {
+  margin: 2rem 0;
+  color: white;
+  background: rgba(15, 76, 129, 0.8);
+  padding: 1rem 3rem;
+  border-radius: 25px;
+  border: none;
+  letter-spacing: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.about-text input:hover {
+  background: rgba(15, 76, 129, 0.9);
+}
+
+.about-img {
+  margin-top: 1rem;
+  grid-column: 1/9;
+  text-align: center;
 }
 
 @media screen and (min-width: 960px) {

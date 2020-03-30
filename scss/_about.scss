@@ -1,0 +1,44 @@
+#about {
+  position: relative;
+  min-height: 100vh;
+}
+
+.about-text {
+  text-align: center;
+  grid-column: 1/9;
+  width: 90%;
+  margin: auto;
+
+  h1 {
+    font-family: "Montserrat-Bold", sans-serif;
+    font-size: 2.4rem;
+    margin: 2rem 0;
+  }
+
+  p {
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  input {
+    margin: 2rem 0;
+    color: white;
+    background: rgba(15, 76, 129, 0.8);
+    padding: 1rem 3rem;
+    border-radius: 25px;
+    border: none;
+    letter-spacing: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+  }
+
+  input:hover {
+    background: rgba(15, 76, 129, 0.9);
+  }
+}
+
+.about-img{
+    margin-top: 1rem;
+    grid-column: 1/9;
+    text-align: center;
+}
