@@ -1,0 +1,35 @@
+#work-exp {
+  width: 90%;
+  margin: auto;
+
+  p {
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 4rem 0;
+    font-weight: 600;
+
+    span{
+      font-weight: 800;
+    }
+  }
+
+  .companies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .company{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 3rem 0;
+    }
+
+    h3{
+      font-family: "Montserrat-Bold", sans-serif;
+      margin: 1.2rem 0 0.2rem 0;
+    }
+  }
+
+}

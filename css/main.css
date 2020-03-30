@@ -152,6 +152,7 @@ h4 {
 .about-text p {
   letter-spacing: 2px;
   text-align: center;
+  font-weight: 600;
 }
 .about-text input {
   margin: 2rem 0;
@@ -189,6 +190,36 @@ h4 {
 
 #education > div p {
   font-weight: bold;
+}
+
+#work-exp {
+  width: 90%;
+  margin: auto;
+}
+#work-exp p {
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 4rem 0;
+  font-weight: 600;
+}
+#work-exp p span {
+  font-weight: 800;
+}
+#work-exp .companies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#work-exp .companies .company {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem 0;
+}
+#work-exp .companies h3 {
+  font-family: "Montserrat-Bold", sans-serif;
+  margin: 1.2rem 0 0.2rem 0;
 }
 
 @media screen and (min-width: 960px) {
