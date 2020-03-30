@@ -66,6 +66,10 @@ h4 {
   grid-template-columns: repeat(8, 1fr);
 }
 
+#home, #about, #education, #work-exp, #projects, #courses, #skills {
+  min-height: 100vh;
+}
+
 .page-heading {
   letter-spacing: 6px;
   font-size: 1.2rem;

@@ -58,6 +58,10 @@ h4 {
   grid-template-columns: repeat(8, 1fr);
 }
 
+#home, #about, #education, #work-exp, #projects, #courses, #skills {
+  min-height: 100vh;
+}
+
 .page-heading {
   letter-spacing: 6px;
   font-size: 1.2rem;
@@ -134,11 +138,6 @@ h4 {
   margin: 1rem;
 }
 
-#about {
-  position: relative;
-  min-height: 100vh;
-}
-
 .about-text {
   text-align: center;
   grid-column: 1/9;
@@ -173,6 +172,23 @@ h4 {
   margin-top: 1rem;
   grid-column: 1/9;
   text-align: center;
+}
+
+.uwindsor, .svnit, .education-img {
+  text-align: center;
+  grid-column: 1/9;
+  width: 90%;
+  margin: auto;
+}
+
+#education > div h2 {
+  font-family: "Montserrat-Bold", sans-serif;
+  margin: 0.5rem 0 0.2rem 0;
+  letter-spacing: 1px;
+}
+
+#education > div p {
+  font-weight: bold;
 }
 
 @media screen and (min-width: 960px) {
