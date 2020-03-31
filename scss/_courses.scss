@@ -1,0 +1,47 @@
+#courses{
+  width: 90%;
+  margin: auto;
+}
+
+.card-udemy{
+  padding: 1rem;
+  background: #EB5352;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+
+  h3{
+    font-family: "Montserrat-Bold", sans-serif;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 1.5rem 0.5rem;
+  }
+
+  p{
+    font-size: 0.8rem;
+  }
+}
+
+.cards{
+  position: relative;
+}
+
+.arrow{
+  top: 50%;
+  position: absolute;
+  z-index: 2;
+  transform: translateY(-50%);
+}
+
+.right-arrow{
+  right: 2%;
+}
+
+.left-arrow{
+  left: 2%;
+}
+
+.arrow:hover{
+
+}

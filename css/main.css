@@ -27,6 +27,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
+  letter-spacing: 1px;
 }
 
 li {
@@ -58,8 +59,10 @@ h4 {
   grid-template-columns: repeat(8, 1fr);
 }
 
-#home, #about, #education, #work-exp, #projects, #courses, #skills {
+#home, #about, #education, #work-exp, #projects, #skills {
   min-height: 100vh;
+  width: 90%;
+  margin: auto;
 }
 
 .page-heading {
@@ -109,8 +112,6 @@ h4 {
 .home-text {
   text-align: center;
   grid-column: 1/9;
-  width: 90%;
-  margin: auto;
 }
 
 .home-img {
@@ -142,8 +143,6 @@ h4 {
 .about-text {
   text-align: center;
   grid-column: 1/9;
-  width: 90%;
-  margin: auto;
 }
 .about-text h1 {
   font-family: "Montserrat-Bold", sans-serif;
@@ -179,8 +178,6 @@ h4 {
 .uwindsor, .svnit, .education-img {
   text-align: center;
   grid-column: 1/9;
-  width: 90%;
-  margin: auto;
 }
 
 #education > div h2 {
@@ -193,10 +190,6 @@ h4 {
   font-weight: bold;
 }
 
-#work-exp {
-  width: 90%;
-  margin: auto;
-}
 #work-exp p {
   letter-spacing: 2px;
   text-align: center;
@@ -226,12 +219,52 @@ h4 {
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 90%;
-  margin: auto;
   grid-gap: 30px;
 }
 .skills-grid img {
   justify-self: center;
+}
+
+#courses {
+  width: 90%;
+  margin: auto;
+}
+
+.card-udemy {
+  padding: 1rem;
+  background: #EB5352;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+.card-udemy h3 {
+  font-family: "Montserrat-Bold", sans-serif;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 1.5rem 0.5rem;
+}
+.card-udemy p {
+  font-size: 0.8rem;
+}
+
+.cards {
+  position: relative;
+}
+
+.arrow {
+  top: 50%;
+  position: absolute;
+  z-index: 2;
+  transform: translateY(-50%);
+}
+
+.right-arrow {
+  right: 2%;
+}
+
+.left-arrow {
+  left: 2%;
 }
 
 @media screen and (min-width: 960px) {
