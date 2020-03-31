@@ -1,0 +1,13 @@
+#projects ul{
+  display: flex;
+  justify-content: space-between;
+  font-family: "Montserrat-Bold", sans-serif;
+
+  li{
+    color: rgba($primary-color,0.2);
+  }
+}
+
+.active{
+  color: rgba($primary-color,1) !important;
+}
