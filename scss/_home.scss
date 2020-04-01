@@ -1,33 +1,68 @@
-.nav-links{
-  display: none;
+@mixin child-transition {
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      transition: all 0.3s ease-in #{$i * .2}s;
+    }
+  }
 }
 
-.hamburger-menu{
-  position: absolute;
-  top: 5%;
-  right: 5%;
+.nav-links {
+  //display: none;
+  position: fixed;
+  background: linear-gradient(to bottom, $primary-color, $secondary-color);
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+  clip-path: circle(100px at 110% -15%);
+  -webkit-clip-path: circle(100px at 110% -15%);
+  transition: all 1s ease-out;
+  pointer-events: none;
+
+  li {
+    opacity: 0;
+    @include child-transition;
+  }
+
+  li.fade{
+    opacity: 1;
+  }
+
+
+  a {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: white;
+    transition: all 0.2s ease-out;
+  }
+
+  a:hover{
+    color: black;
+    transform: scale(1.2);
+  }
+
 }
 
-.hamburger-menu span{
-  padding: 0.1rem 1.2rem;
-  background: $gradient;
-  margin: 0.4rem 0;
-  display: block;
+.nav-links.open {
+  clip-path: circle(1500px at 110% -15%);
+  -webkit-clip-path: circle(1500px at 110% -15%);
+  pointer-events: all;
 }
 
-#home{
+#home {
   position: relative;
   min-height: 100vh;
 }
 
-.home-text{
+.home-text {
   text-align: center;
   grid-column: 1/9;
-  //width: 90%;
-  //margin: auto;
 }
 
-.home-img{
+.home-img {
   margin-top: 4rem;
   grid-column: 1/9;
   text-align: center;
@@ -49,6 +84,40 @@
   letter-spacing: 4px;
 }
 
-.home-social a{
+.home-social a {
   margin: 1rem;
+}
+
+.toggle .line1 {
+  transform: rotate(45deg) translateY(0.85rem);
+  background: white;
+}
+
+.toggle .line2 {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(-45deg) translateY(-0.85rem);
+  background: white;
+}
+
+.hamburger-menu {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.line1, .line2, .line3 {
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-menu span {
+  padding: 0.1rem 1.2rem;
+  background: $gradient;
+  margin: 0.4rem 0;
+  display: block;
 }

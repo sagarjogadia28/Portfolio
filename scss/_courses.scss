@@ -32,6 +32,7 @@
   position: absolute;
   z-index: 2;
   transform: translateY(-50%);
+  transition: all 0.5s ease-in;
 }
 
 .right-arrow{
@@ -43,5 +44,5 @@
 }
 
 .arrow:hover{
-
+  transform: scale(1.5);
 }
