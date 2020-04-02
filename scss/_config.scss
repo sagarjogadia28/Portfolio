@@ -16,6 +16,10 @@ $gradient: linear-gradient(to left, $primary-color, $secondary-color);
   color: $primary-color;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: "Montserrat";
   src: url("../assets/fonts/Montserrat-Regular.ttf");

@@ -1,13 +1,114 @@
-#projects ul{
+#myBtnContainer {
   display: flex;
   justify-content: space-between;
   font-family: "Montserrat-Bold", sans-serif;
+  cursor: pointer;
+}
 
-  li{
-    color: rgba($primary-color,0.2);
+.content {
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  margin: 2rem 0;
+  cursor: pointer;
+  height: 300px;
+}
+
+.details {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  color: white;
+  font-size: 1.2rem;
+  border: 2px solid white;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease-in;
+  z-index: 2;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.3;
+  border-radius: 50px;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+}
+
+.project {
+  width: 80%;
+  margin: auto;
+  display: none; /* Hide columns by default */
+}
+
+.project-title {
+  position: absolute;
+  color: white;
+  font-family: "Montserrat-Bold", sans-serif;
+  bottom: 10%;
+  left: 10%;
+  right: 10%;
+  font-size: 1.6rem;
+  transition: all 0.3s ease-in;
+  z-index: 2;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  //object-fit: scale-down;
+  transition: all 0.3s ease-in;
+  z-index: 2;
+}
+
+.content:hover {
+  .details {
+    bottom: 20%;
+    opacity: 0.8;
+    z-index: 2;
+  }
+
+  .details:hover{
+    background-color: #ED6663;
+  }
+
+  .overlay {
+    z-index: 1;
+    opacity: 0.5;
+  }
+
+  .project-title {
+    z-index: 2;
+    bottom: 50%;
+  }
+
+  .project-image {
+    z-index: 2;
+    transform: scale(1.2);
   }
 }
 
-.active{
-  color: rgba($primary-color,1) !important;
+.show {
+  display: block;
+}
+
+.btn {
+  padding: 12px 16px;
+  color: rgba($primary-color, 0.2);
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.btn:hover {
+  transform: scale(1.2);
+  color: rgba($primary-color, 0.3);
+}
+
+.btn.active {
+  color: $primary-color;
 }

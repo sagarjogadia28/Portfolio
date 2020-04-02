@@ -6,11 +6,17 @@
   }
 }
 
+body.prevent-scroll {
+  overflow: hidden;
+}
+
+
 .nav-links {
   //display: none;
   position: fixed;
   background: linear-gradient(to bottom, $primary-color, $secondary-color);
   height: 100vh;
+  opacity: 0.95;
   width: 100%;
   z-index: 10;
   display: flex;
@@ -27,7 +33,7 @@
     @include child-transition;
   }
 
-  li.fade{
+  li.fade {
     opacity: 1;
   }
 
@@ -39,7 +45,7 @@
     transition: all 0.2s ease-out;
   }
 
-  a:hover{
+  a:hover {
     color: black;
     transform: scale(1.2);
   }
