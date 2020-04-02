@@ -419,39 +419,40 @@ body.prevent-scroll {
   z-index: 2;
 }
 
-.content:hover .details {
+.content:hover .details, .content:focus .details {
   bottom: 20%;
   opacity: 0.8;
   z-index: 2;
 }
-.content:hover .details:hover {
+.content:hover .details:hover, .content:hover .details:focus, .content:focus .details:hover, .content:focus .details:focus {
   background-color: #ED6663;
 }
-.content:hover .overlay {
+.content:hover .overlay, .content:focus .overlay {
   z-index: 1;
   opacity: 0.5;
 }
-.content:hover .project-title {
+.content:hover .project-title, .content:focus .project-title {
   z-index: 2;
   bottom: 50%;
 }
-.content:hover .project-image {
+.content:hover .project-image, .content:focus .project-image {
   z-index: 2;
   transform: scale(1.2);
 }
 
 .show {
   display: block;
+  animation: slide-up 0.4s ease-in;
 }
 
 .btn {
   padding: 12px 16px;
   color: rgba(15, 76, 129, 0.2);
   cursor: pointer;
-  transition: all 0.2s ease-in;
+  transition: all 0.5s ease-in;
 }
 
-.btn:hover {
+.btn:hover, .btn:focus {
   transform: scale(1.2);
   color: rgba(15, 76, 129, 0.3);
 }
@@ -460,6 +461,14 @@ body.prevent-scroll {
   color: #0F4C81;
 }
 
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
 footer {
   background: #0F4C81;
 }
