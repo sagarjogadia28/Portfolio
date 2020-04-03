@@ -2,7 +2,10 @@
   display: flex;
   justify-content: space-between;
   font-family: "Montserrat-Bold", sans-serif;
-  cursor: pointer;
+}
+
+#projects{
+  overflow: hidden;
 }
 
 .content {
@@ -12,6 +15,7 @@
   margin: 2rem 0;
   cursor: pointer;
   height: 300px;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.3), 0 20px 20px rgba(0,0,0,0.1);
 }
 
 .details {
@@ -74,7 +78,7 @@
   }
 
   .details:hover, .details:focus {
-    background-color: #ED6663;
+    background: $gradient;
   }
 
   .overlay {
@@ -110,15 +114,15 @@
   color: rgba($primary-color, 0.3);
 }
 
-.btn.active {
+.btn.active-project {
   color: $primary-color;
 }
 
 @keyframes slide-up {
   from {
-    transform: translateY(100%);
+    transform: translateX(100%);
   }
   to {
-    transform: translateY(0%);
+    transform: translateX(0%);
   }
 }

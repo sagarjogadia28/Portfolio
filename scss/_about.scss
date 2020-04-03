@@ -28,7 +28,7 @@
     transition: all 0.3s ease-in;
   }
 
-  input:hover {
+  input:hover, input:focus {
     background: rgba(15, 76, 129, 0.9);
   }
 }

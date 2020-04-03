@@ -3,19 +3,21 @@
   margin: auto;
 }
 
-.card-udemy{
+.card{
   padding: 1rem;
-  background: #EB5352;
   border-radius: 20px;
   text-align: center;
   color: white;
-  position: relative;
+  margin: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   h3{
     font-family: "Montserrat-Bold", sans-serif;
     line-height: 1.6;
     font-size: 1rem;
-    margin: 1.5rem 0.5rem;
+    margin: 1.5rem 1rem;
   }
 
   p{
@@ -23,8 +25,16 @@
   }
 }
 
-.cards{
-  position: relative;
+.card-udemy {
+  background: #EB5352;
+}
+
+.card-coursera {
+  background: #4A89DC;
+}
+
+.card-linkedin {
+  background: #0077B5;
 }
 
 .arrow{
@@ -33,6 +43,7 @@
   z-index: 2;
   transform: translateY(-50%);
   transition: all 0.5s ease-in;
+  cursor: pointer;
 }
 
 .right-arrow{
@@ -41,8 +52,4 @@
 
 .left-arrow{
   left: 2%;
-}
-
-.arrow:hover{
-  transform: scale(1.5);
 }

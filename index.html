@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Sagar Jogadia | Software Developer</title>
+    <link rel="stylesheet" href="css/glider.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -409,7 +410,7 @@
         <a target="_blank"
            href="https://drive.google.com/file/d/1lkKQ-RuZ9iztIHCcu5uIsrIUYQ1QShVT/view?usp=sharing"><input
                 type="button" value="RESUME"></a>
-    </div>h
+    </div>
 
     <div class="about-img">
         <img src="assets/about-diagram.svg" alt="about-diagram"/>
@@ -977,21 +978,48 @@
 
 <section id="courses">
     <h2 class="page-heading primary">Courses</h2>
-    <div class="cards">
-        <img src="assets/left.svg" alt="Left arrow" class="left-arrow arrow">
-        <img src="assets/right.svg" alt="Right arrow" class="right-arrow arrow">
-        <div class="card-udemy">
-            <img src="assets/udemy.svg" alt="Udemy logo" class="card-logo">
-            <h3 class="card-title">Comprehensive 2019 Android Development Masterclass</h3>
-            <p class="card-date">Issued: July 2019</p>
+    <div class="glider-contain">
+        <div class="glider">
+            <div class="card card-udemy">
+                <img src="assets/sites/udemy.svg" alt="Udemy logo" class="card-logo">
+                <h3 class="card-title">Comprehensive 2019 Android Development Masterclass</h3>
+                <p class="card-date">Issued: July 2019</p>
+            </div>
+
+            <div class="card card-coursera">
+                <img src="assets/sites/coursera-logo.svg" alt="Coursera logo" class="card-logo">
+                <h3 class="card-title">Kotlin for Java Developers</h3>
+                <p class="card-date">Issued: July 2019</p>
+            </div>
+
+            <div class="card card-linkedin">
+                <img src="assets/sites/linkedin-logo.svg" alt="Linkedin Learning logo" class="card-logo">
+                <h3 class="card-title">Android Development Essential Training</h3>
+                <p class="card-date">Issued: February 2019</p>
+            </div>
+
+            <div class="card card-udemy">
+                <img src="assets/sites/udemy.svg" alt="Udemy logo" class="card-logo">
+                <h3 class="card-title">Complete Python 3 Course</h3>
+                <p class="card-date">Issued: February 2019</p>
+            </div>
+
+            <div class="card card-udemy">
+                <img src="assets/sites/udemy.svg" alt="Udemy logo" class="card-logo">
+                <h3 class="card-title">Master Data Structures + Algorithms</h3>
+                <p class="card-date">Issued: November 2018</p>
+            </div>
+
         </div>
+        <img src="assets/left.svg" alt="Left arrow" class="left-arrow arrow glider-prev">
+        <img src="assets/right.svg" alt="Right arrow" class="right-arrow arrow glider-next">
     </div>
 </section>
 
 <section id="projects">
     <h2 class="page-heading primary">Projects</h2>
     <ul id="myBtnContainer" class="primary">
-        <li class="filter-all btn active">All</li>
+        <li class="filter-all btn active-project">All</li>
         <li class="filter-android btn">Android</li>
         <li class="filter-web btn">Web</li>
         <li class="filter-java btn">Java</li>
@@ -1002,26 +1030,28 @@
         <div class="project android">
             <div class="content">
                 <div class="overlay"></div>
-                <img class="project-image" src="assets/projects/count-it.jpg" alt="Count it project">
-                <h4 class="project-title">Count It</h4>
-                <a href=""><h3 class="details">View more</h3></a>
-            </div>
-        </div>
-        <div class="project android">
-            <div class="content">
-                <div class="overlay"></div>
                 <img class="project-image" src="assets/projects/distracted-driver.jpg"
                      alt="Distracted driver detection project">
                 <h4 class="project-title">Distracted Driver Detection</h4>
-                <a href=""><h3 class="details">View more</h3></a>
+                <a target="_blank" href="https://github.com/sagarjogadia28/Distracted-Driver-Detection"><h3
+                        class="details">View more</h3></a>
             </div>
         </div>
         <div class="project android">
             <div class="content">
                 <div class="overlay"></div>
-                <img class="project-image" src="assets/projects/sos.jpg" alt="SOS project">
+                <img class="project-image" src="assets/projects/count.jpg" alt="Count it project">
+                <h4 class="project-title">Count It</h4>
+                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.sagarjogadia28.countit"><h3
+                        class="details">View more</h3></a>
+            </div>
+        </div>
+        <div class="project android">
+            <div class="content">
+                <div class="overlay"></div>
+                <img class="project-image" src="assets/projects/save-our-soul.jpg" alt="SOS project">
                 <h4 class="project-title">SOS</h4>
-                <a href=""><h3 class="details">View more</h3></a>
+                <a target="_blank" href=""><h3 class="details">View more</h3></a>
             </div>
         </div>
         <div class="project android">
@@ -1029,7 +1059,8 @@
                 <div class="overlay"></div>
                 <img class="project-image" src="assets/projects/car-pool.jpg" alt="CarPool project">
                 <h4 class="project-title">CarPool</h4>
-                <a href=""><h3 class="details">View more</h3></a>
+                <a target="_blank" href="https://github.com/sagarjogadia28/CarPool"><h3 class="details">View more</h3>
+                </a>
             </div>
         </div>
 
@@ -1038,7 +1069,8 @@
                 <div class="overlay"></div>
                 <img class="project-image" src="assets/projects/mysite19.jpg" alt="Library Management project">
                 <h4 class="project-title">Library Management</h4>
-                <a href=""><h3 class="details">View more</h3></a>
+                <a target="_blank" href="https://github.com/sagarjogadia28/mysiteF19"><h3 class="details">View more</h3>
+                </a>
             </div>
         </div>
         <div class="project web">
@@ -1046,7 +1078,8 @@
                 <div class="overlay"></div>
                 <img class="project-image" src="assets/projects/footblog.jpg" alt="Football blog project">
                 <h4 class="project-title">FootBlog</h4>
-                <a href=""><h3 class="details">View more</h3></a>
+                <a target="_blank" href="https://github.com/sagarjogadia28/FootBlog"><h3 class="details">View more</h3>
+                </a>
             </div>
         </div>
 
@@ -1055,7 +1088,8 @@
                 <div class="overlay"></div>
                 <img class="project-image" src="assets/projects/web-search-engine.jpg" alt="Web Search project">
                 <h4 class="project-title">Web Search Engine</h4>
-                <a href=""><h3 class="details">View more</h3></a>
+                <a target="_blank" href="https://github.com/sagarjogadia28/WebSearchEngine"><h3 class="details">View
+                    more</h3></a>
             </div>
         </div>
         <div class="project java">
@@ -1063,7 +1097,8 @@
                 <div class="overlay"></div>
                 <img class="project-image" src="assets/projects/sokoban.jpg" alt="Sokoban project">
                 <h4 class="project-title">Sokoban Solver</h4>
-                <a href=""><h3 class="details">View more</h3></a>
+                <a target="_blank" href="https://github.com/sagarjogadia28/Sokoban-Solver"><h3 class="details">View
+                    more</h3></a>
             </div>
         </div>
         <div class="project java">
@@ -1071,7 +1106,7 @@
                 <div class="overlay"></div>
                 <img class="project-image" src="assets/projects/epm.jpg" alt="EPM project">
                 <h4 class="project-title">Event Processing Manager</h4>
-                <a href=""><h3 class="details">View more</h3></a>
+                <a target="_blank" href="https://github.com/sagarjogadia28/EPM"><h3 class="details">View more</h3></a>
             </div>
         </div>
 
@@ -1080,7 +1115,8 @@
                 <div class="overlay"></div>
                 <img class="project-image" src="assets/projects/taekwondo.jpg" alt="Taekwondo project">
                 <h4 class="project-title">Taekwondo Institution</h4>
-                <a href=""><h3 class="details">View more</h3></a>
+                <a target="_blank" href="https://github.com/sagarjogadia28/Taekwondo-Web-Application"><h3
+                        class="details">View more</h3></a>
             </div>
         </div>
 
@@ -1133,6 +1169,7 @@
     </div>
 </footer>
 
+<script src="glider.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

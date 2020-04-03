@@ -42,10 +42,6 @@ a {
   text-decoration: none;
 }
 
-.page-heading {
-  text-transform: uppercase;
-}
-
 h1, h3 {
   font-size: 1.2rem;
 }
@@ -73,8 +69,9 @@ h4 {
   letter-spacing: 6px;
   font-size: 1.2rem;
   font-family: "Montserrat-Bold", sans-serif;
-  margin: 4rem 0;
+  padding: 4rem 0;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .page-heading::after {
@@ -244,7 +241,7 @@ body.prevent-scroll {
   cursor: pointer;
   transition: all 0.3s ease-in;
 }
-.about-text input:hover {
+.about-text input:hover, .about-text input:focus {
   background: rgba(15, 76, 129, 0.9);
 }
 
@@ -309,26 +306,36 @@ body.prevent-scroll {
   margin: auto;
 }
 
-.card-udemy {
+.card {
   padding: 1rem;
-  background: #EB5352;
   border-radius: 20px;
   text-align: center;
   color: white;
-  position: relative;
+  margin: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.card-udemy h3 {
+.card h3 {
   font-family: "Montserrat-Bold", sans-serif;
   line-height: 1.6;
   font-size: 1rem;
-  margin: 1.5rem 0.5rem;
+  margin: 1.5rem 1rem;
 }
-.card-udemy p {
+.card p {
   font-size: 0.8rem;
 }
 
-.cards {
-  position: relative;
+.card-udemy {
+  background: #EB5352;
+}
+
+.card-coursera {
+  background: #4A89DC;
+}
+
+.card-linkedin {
+  background: #0077B5;
 }
 
 .arrow {
@@ -337,6 +344,7 @@ body.prevent-scroll {
   z-index: 2;
   transform: translateY(-50%);
   transition: all 0.5s ease-in;
+  cursor: pointer;
 }
 
 .right-arrow {
@@ -347,15 +355,14 @@ body.prevent-scroll {
   left: 2%;
 }
 
-.arrow:hover {
-  transform: scale(1.5);
-}
-
 #myBtnContainer {
   display: flex;
   justify-content: space-between;
   font-family: "Montserrat-Bold", sans-serif;
-  cursor: pointer;
+}
+
+#projects {
+  overflow: hidden;
 }
 
 .content {
@@ -365,6 +372,7 @@ body.prevent-scroll {
   margin: 2rem 0;
   cursor: pointer;
   height: 300px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3), 0 20px 20px rgba(0, 0, 0, 0.1);
 }
 
 .details {
@@ -425,7 +433,7 @@ body.prevent-scroll {
   z-index: 2;
 }
 .content:hover .details:hover, .content:hover .details:focus, .content:focus .details:hover, .content:focus .details:focus {
-  background-color: #ED6663;
+  background: linear-gradient(to left, #0F4C81, #ED6663);
 }
 .content:hover .overlay, .content:focus .overlay {
   z-index: 1;
@@ -457,16 +465,16 @@ body.prevent-scroll {
   color: rgba(15, 76, 129, 0.3);
 }
 
-.btn.active {
+.btn.active-project {
   color: #0F4C81;
 }
 
 @keyframes slide-up {
   from {
-    transform: translateY(100%);
+    transform: translateX(100%);
   }
   to {
-    transform: translateY(0%);
+    transform: translateX(0%);
   }
 }
 footer {

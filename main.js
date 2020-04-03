@@ -74,8 +74,22 @@ const btns = btnContainer.getElementsByClassName("btn");
 
 for (let i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function () {
-        const current = document.getElementsByClassName("active");
-        current[0].classList.remove("active");
-        this.classList.add("active");
+        const current = document.getElementsByClassName("active-project");
+        current[0].classList.remove("active-project");
+        this.classList.add("active-project");
     });
 }
+
+/****************** GLIDE ******************/
+
+window.addEventListener('load', function () {
+    new Glider(document.querySelector('.glider'), {
+        slidesToShow: 1,
+        duration: 2,
+        rewind: true,
+        arrows :{
+            prev: '.glider-prev',
+            next: '.glider-next'
+        }
+    })
+});
