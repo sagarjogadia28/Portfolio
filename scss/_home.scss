@@ -89,9 +89,19 @@ body.prevent-scroll {
   margin: 0.5rem 0 2rem 0;
   letter-spacing: 4px;
 }
+.home-social{
+  a{
+    margin: 1rem;
+  }
 
-.home-social a {
-  margin: 1rem;
+  img{
+    transition: all 0.3s ease-in;
+  }
+
+  a:hover img, a:focus img{
+    transform: scale(1.1);
+  }
+
 }
 
 .toggle .line1 {
@@ -126,4 +136,121 @@ body.prevent-scroll {
   background: $gradient;
   margin: 0.4rem 0;
   display: block;
+}
+
+
+/*********** ANIMATIONS ***********/
+
+#person-1,
+#person-2,
+#headphones,
+#face,
+#hair,
+#cap-1,
+#cap-3,
+#cap {
+  animation: person 1.5s ease-in-out infinite alternate;
+  transform-origin: bottom;
+}
+
+#neck {
+  animation: person-neck 1s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+#plant-top {
+  animation: wave 6s -0.5s linear infinite alternate;
+  transform-origin: bottom;
+}
+
+#plant-bottom {
+  animation: wave 6s linear infinite alternate 0.4s;
+  transform-origin: bottom;
+}
+
+#b1,
+#b3,
+#b5,
+#b7,
+#b9,
+#b11 {
+  animation: bricks 2s linear infinite alternate;
+}
+
+#b2,
+#b4,
+#b6,
+#b8,
+#b10,
+#b12 {
+  animation: bricks 2s linear infinite alternate 1s;
+}
+
+#b13,
+#b15,
+#b17,
+#b19,
+#b21 {
+  animation: bricks 2s linear infinite alternate;
+}
+
+#b14,
+#b16,
+#b18,
+#b20 {
+  animation: bricks 2s linear infinite alternate 2s;
+}
+
+@keyframes bricks {
+  from {
+    fill: $secondary-color;
+    opacity: 0.8;
+  }
+
+  to {
+    fill: #5335EC;
+    opacity: 0.4;
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: rotateZ(0deg) translateZ(-1px);
+  }
+
+  25% {
+    transform: rotateZ(-6deg) translateZ(-1px);
+  }
+
+  50% {
+    transform: rotateZ(-3deg) translateZ(-1px);
+  }
+
+  75% {
+    transform: rotateZ(3deg) translateZ(-1px);
+  }
+
+  100% {
+    transform: rotateZ(0deg) translateZ(-1px);
+  }
+}
+
+@keyframes person {
+  from {
+    transform: rotateZ(-0.6deg);
+  }
+
+  to {
+    transform: rotateZ(0.6deg);
+  }
+}
+
+@keyframes person-neck {
+  from {
+    transform: rotateZ(-0.3deg);
+  }
+
+  to {
+    transform: rotateZ(0.3deg);
+  }
 }
