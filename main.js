@@ -87,9 +87,44 @@ window.addEventListener('load', function () {
         slidesToShow: 1,
         duration: 2,
         rewind: true,
-        arrows :{
+        arrows: {
             prev: '.glider-prev',
             next: '.glider-next'
         }
     })
 });
+
+/****************** INTERSECTION OBSERVER ******************/
+const options = {
+    threshold: 0
+};
+
+observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.intersectionRatio > 0) {
+            entry.target.classList.add('slide-in');
+            observer.unobserve(entry.target);
+        } else {
+            entry.target.classList.remove('slide-in');
+        }
+    });
+}, options);
+
+let educationSection = document.querySelectorAll("#education > div");
+educationSection.forEach(section => {
+    observer.observe(section);
+});
+
+let workExpParagraph = document.querySelector("#work-exp p");
+observer.observe(workExpParagraph);
+
+let workExpSVG = document.querySelector("#work-exp svg");
+observer.observe(workExpSVG);
+
+let workExpCompanies = document.querySelectorAll(".company");
+workExpCompanies.forEach(section => {
+    observer.observe(section);
+});
+
+let skillsSection = document.querySelector(".skills-grid");
+observer.observe(skillsSection);

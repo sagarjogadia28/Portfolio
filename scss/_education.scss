@@ -1,8 +1,7 @@
 .uwindsor, .svnit, .education-img {
   text-align: center;
   grid-column: 1/9;
-  //width: 90%;
-  //margin: auto;
+  margin-top: 3rem;
 }
 
 #education > div h2 {
@@ -13,4 +12,17 @@
 
 #education > div p {
   font-weight: bold;
+}
+
+#education > div{
+  @include animateToX(50%);
+  //transform: translateX(50%);
+  //opacity: 0;
+  //transition: all 1s ease-out;
+}
+
+#education > div.slide-in{
+  @include animateToOriginal;
+  //transform: translateX(0);
+  //opacity: 1;
 }

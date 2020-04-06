@@ -16,7 +16,7 @@ $gradient: linear-gradient(to left, $primary-color, $secondary-color);
   color: $primary-color;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -93,4 +93,15 @@ h4 {
 
 .page-heading:hover::after {
   width: 15%;
+}
+
+@mixin animateToOriginal {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+@mixin animateToX($value) {
+  opacity: 0;
+  transform: translate($value);
+  transition: all 1s ease-out;
 }

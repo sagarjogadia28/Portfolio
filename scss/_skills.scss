@@ -1,11 +1,19 @@
-.skills-grid{
+.skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  //width: 90%;
-  //margin: auto;
   grid-gap: 30px;
+  @include animateToX(50%);
+  //transform: translateX(50%);
+  //opacity: 0;
+  //transition: all 1s ease-out;
 
-  img{
+  img {
     justify-self: center;
   }
+}
+
+.skills-grid.slide-in {
+  @include animateToOriginal;
+  //transform: translateX(0);
+  //opacity: 1;
 }

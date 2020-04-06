@@ -364,6 +364,7 @@ body.prevent-scroll {
 .uwindsor, .svnit, .education-img {
   text-align: center;
   grid-column: 1/9;
+  margin-top: 3rem;
 }
 
 #education > div h2 {
@@ -376,6 +377,17 @@ body.prevent-scroll {
   font-weight: bold;
 }
 
+#education > div {
+  opacity: 0;
+  transform: translate(50%);
+  transition: all 1s ease-out;
+}
+
+#education > div.slide-in {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
 #work-exp p {
   letter-spacing: 2px;
   text-align: center;
@@ -384,6 +396,15 @@ body.prevent-scroll {
 }
 #work-exp p span {
   font-weight: 800;
+}
+#work-exp p, #work-exp svg {
+  opacity: 0;
+  transform: translate(-50%);
+  transition: all 1s ease-out;
+}
+#work-exp p.slide-in, #work-exp svg.slide-in {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 #work-exp .companies {
   display: flex;
@@ -396,19 +417,93 @@ body.prevent-scroll {
   flex-direction: column;
   align-items: center;
   margin: 3rem 0;
+  transform: translateY(50%);
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+#work-exp .companies .company.slide-in {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 #work-exp .companies h3 {
   font-family: "Montserrat-Bold", sans-serif;
   margin: 1.2rem 0 0.2rem 0;
 }
 
+.light-window {
+  animation: night-window-light 4s ease-in-out infinite alternate;
+}
+
+#building {
+  animation: night-building 4s ease-in-out infinite alternate;
+}
+
+#sky {
+  animation: night-sky 4s ease-in-out infinite alternate;
+}
+
+.window {
+  animation: night-window-opacity 4s ease-in-out infinite alternate;
+}
+
+#coder {
+  animation: person 1.5s ease-in-out infinite alternate;
+  transform-origin: bottom;
+}
+
+@keyframes night-building {
+  from {
+    fill: #DFD9FD;
+  }
+  to {
+    fill: #C1B5FF;
+  }
+}
+@keyframes night-sky {
+  from {
+    fill: #B9ABFF;
+  }
+  to {
+    fill: #625B88;
+  }
+}
+@keyframes night-window-light {
+  0% {
+    fill: #5335EC;
+    opacity: 0.4;
+  }
+  50% {
+    fill: #FFFF00;
+    opacity: 0.7;
+  }
+  100% {
+    fill: #FFFF00;
+    opacity: 0.9;
+  }
+}
+@keyframes night-window-opacity {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
+  opacity: 0;
+  transform: translate(50%);
+  transition: all 1s ease-out;
 }
 .skills-grid img {
   justify-self: center;
+}
+
+.skills-grid.slide-in {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 #courses {
@@ -604,6 +699,10 @@ footer {
   padding-top: 2px;
   width: 5%;
   margin: 0.5rem auto auto;
+  transition: 0.5s;
+}
+.footer-content h3:hover::after {
+  width: 15%;
 }
 
 .footer-bg {

@@ -1,16 +1,12 @@
-footer{
+footer {
   background: $primary-color;
 }
 
-.footer-content{
+.footer-content {
   width: 90%;
   margin: auto;
   color: white;
   text-align: center;
-
-  h3{
-
-  }
 
   h3::after {
     display: block;
@@ -19,15 +15,20 @@ footer{
     padding-top: 2px;
     width: 5%;
     margin: 0.5rem auto auto;
+    transition: .5s;
+  }
+
+  h3:hover::after {
+    width: 15%;
   }
 }
 
-.footer-bg{
+.footer-bg {
   width: 100%;
   display: block;
 }
 
-.social-icons{
+.social-icons {
   display: flex;
   align-items: center;
   justify-items: center;
@@ -36,27 +37,28 @@ footer{
   width: 50%;
 }
 
-.connect-info{
+.connect-info {
   display: flex;
   flex-direction: column;
   margin: 1rem auto;
   align-items: center;
 }
 
-.email, .phone{
+.email, .phone {
   display: flex;
   margin: 0.4rem;
   width: 50%;
   justify-content: flex-start;
 
-  img{
+  img {
     margin-right: 2rem;
   }
 }
 
-.copyright{
+.copyright {
   background: $secondary-color;
-  p{
+
+  p {
     font-family: "Montserrat-Bold", sans-serif;
     margin: 0;
     color: white;
