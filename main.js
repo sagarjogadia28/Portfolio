@@ -25,8 +25,8 @@ function changeClass() {
     })
 }
 
-/****************** PROJECTION MENU ******************/
-
+/****************** PROJECT MENU ******************/
+const allProjects = document.getElementsByClassName("project");
 mySelection('all'); // Execute the function and show all columns
 
 // Add active class to the current button (highlight it)
@@ -54,7 +54,6 @@ document.querySelector(".filter-csharp").addEventListener("click", () => {
 
 
 function mySelection(c) {
-    const allProjects = document.getElementsByClassName("project");
     if (c === 'all') {
         for (let i = 0; i < allProjects.length; i++) {
             allProjects[i].classList.add('show');
@@ -118,7 +117,7 @@ educationSection.forEach(section => {
 let workExpParagraph = document.querySelector("#work-exp p");
 observer.observe(workExpParagraph);
 
-let workExpSVG = document.querySelector("#work-exp svg");
+let workExpSVG = document.querySelector("#work-exp .work-exp-img");
 observer.observe(workExpSVG);
 
 let workExpCompanies = document.querySelectorAll(".company");
@@ -128,3 +127,8 @@ workExpCompanies.forEach(section => {
 
 let skillsSection = document.querySelector(".skills-grid");
 observer.observe(skillsSection);
+
+let projects = document.querySelectorAll(".project");
+projects.forEach(section => {
+    observer.observe(section);
+});

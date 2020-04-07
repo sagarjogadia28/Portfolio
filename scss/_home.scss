@@ -24,7 +24,7 @@ body.prevent-scroll {
   text-align: center;
   justify-content: space-evenly;
   clip-path: circle(100px at 110% -15%);
-  -webkit-clip-path: circle(100px at 110% -15%);
+  //-webkit-clip-path: circle(100px at 110% -15%);
   transition: all 1s ease-out;
   pointer-events: none;
 
@@ -54,25 +54,39 @@ body.prevent-scroll {
 
 .nav-links.open {
   clip-path: circle(1500px at 110% -15%);
-  -webkit-clip-path: circle(1500px at 110% -15%);
+  //-webkit-clip-path: circle(1500px at 110% -15%);
   pointer-events: all;
 }
 
 #home {
   position: relative;
   min-height: 100vh;
+  //grid-template-rows: 1fr 1fr;
 }
 
 .home-text {
   text-align: center;
   grid-column: 1/9;
+  //grid-row: span 1;
 }
 
 .home-img {
-  margin-top: 4rem;
+  //grid-row: span 1;
+  //width: 80%;
+  //height: 80%;
+  margin-top: 3.5rem;
+  //margin: auto;
+  //margin: 3.5rem auto 0 auto;
   grid-column: 1/9;
+  padding: 2rem;
   text-align: center;
 }
+
+//.home-img svg{
+//  text-align: center;
+//  display: block;
+//  margin: auto;
+//}
 
 .lg-heading {
   font-family: "Montserrat-Bold", sans-serif;

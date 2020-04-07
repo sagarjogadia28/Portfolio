@@ -11,17 +11,17 @@
     }
   }
 
-  p,svg{
-    @include animateToX(-50%);
-    //transform: translateX(-50%);
-    //opacity: 0;
-    //transition: all 1s ease-out;
+  .work-exp-img {
+    text-align: center;
+    padding: 2rem;
   }
 
-  p.slide-in, svg.slide-in{
+  p, .work-exp-img {
+    @include animateToX(-50%);
+  }
+
+  p.slide-in, .work-exp-img.slide-in {
     @include animateToOriginal;
-    //transform: translateX(0);
-    //opacity: 1;
   }
 
   .companies {
@@ -31,6 +31,7 @@
     align-items: center;
 
     .company {
+      flex: 1 1 20rem;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -54,19 +55,19 @@
 }
 
 .light-window {
-  animation: night-window-light 4s ease-in-out infinite alternate;
+  animation: night-window-light 4s ease-in-out infinite alternate 3s;
 }
 
 #building {
-  animation: night-building 4s ease-in-out infinite alternate;
+  animation: night-building 4s ease-in-out infinite alternate 3s;
 }
 
 #sky {
-  animation: night-sky 4s ease-in-out infinite alternate;
+  animation: night-sky 4s ease-in-out infinite alternate 3s;
 }
 
 .window {
-  animation: night-window-opacity 4s ease-in-out infinite alternate;
+  animation: night-window-opacity 4s ease-in-out infinite alternate 3s;
 }
 
 #coder{

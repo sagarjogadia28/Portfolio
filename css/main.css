@@ -104,7 +104,6 @@ body.prevent-scroll {
   text-align: center;
   justify-content: space-evenly;
   clip-path: circle(100px at 110% -15%);
-  -webkit-clip-path: circle(100px at 110% -15%);
   transition: all 1s ease-out;
   pointer-events: none;
 }
@@ -142,7 +141,6 @@ body.prevent-scroll {
 
 .nav-links.open {
   clip-path: circle(1500px at 110% -15%);
-  -webkit-clip-path: circle(1500px at 110% -15%);
   pointer-events: all;
 }
 
@@ -157,8 +155,9 @@ body.prevent-scroll {
 }
 
 .home-img {
-  margin-top: 4rem;
+  margin-top: 3.5rem;
   grid-column: 1/9;
+  padding: 2rem;
   text-align: center;
 }
 
@@ -397,12 +396,16 @@ body.prevent-scroll {
 #work-exp p span {
   font-weight: 800;
 }
-#work-exp p, #work-exp svg {
+#work-exp .work-exp-img {
+  text-align: center;
+  padding: 2rem;
+}
+#work-exp p, #work-exp .work-exp-img {
   opacity: 0;
   transform: translate(-50%);
   transition: all 1s ease-out;
 }
-#work-exp p.slide-in, #work-exp svg.slide-in {
+#work-exp p.slide-in, #work-exp .work-exp-img.slide-in {
   transform: translate(0, 0);
   opacity: 1;
 }
@@ -413,6 +416,7 @@ body.prevent-scroll {
   align-items: center;
 }
 #work-exp .companies .company {
+  flex: 1 1 20rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -431,19 +435,19 @@ body.prevent-scroll {
 }
 
 .light-window {
-  animation: night-window-light 4s ease-in-out infinite alternate;
+  animation: night-window-light 4s ease-in-out infinite alternate 3s;
 }
 
 #building {
-  animation: night-building 4s ease-in-out infinite alternate;
+  animation: night-building 4s ease-in-out infinite alternate 3s;
 }
 
 #sky {
-  animation: night-sky 4s ease-in-out infinite alternate;
+  animation: night-sky 4s ease-in-out infinite alternate 3s;
 }
 
 .window {
-  animation: night-window-opacity 4s ease-in-out infinite alternate;
+  animation: night-window-opacity 4s ease-in-out infinite alternate 3s;
 }
 
 #coder {
@@ -610,6 +614,14 @@ body.prevent-scroll {
   margin: auto;
   display: none;
   /* Hide columns by default */
+  transform: translateY(50%);
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.project.slide-in {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .project-title {
@@ -654,6 +666,7 @@ body.prevent-scroll {
 }
 
 .show {
+  opacity: 1;
   display: block;
   animation: slide-up 0.4s ease-in;
 }
@@ -748,6 +761,15 @@ footer {
   padding: 0.4rem 0;
 }
 
+@media screen and (min-width: 620px) {
+  body {
+    font-size: 17px;
+  }
+
+  .home-img {
+    padding: 3rem;
+  }
+}
 @media screen and (min-width: 960px) {
   body {
     font-size: 18px;

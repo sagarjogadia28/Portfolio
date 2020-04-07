@@ -1,18 +1,25 @@
 //small tablet style
-@media screen and (min-width: 620px){
-  
+@media screen and (min-width: 620px) {
+  body {
+    font-size: 17px;
+  }
+  .home-img {
+    padding: 3rem;
+    //height: 70%;
+    //margin-top: 2rem;
+  }
 }
 
 //large tablet and laptop style
-@media screen and (min-width: 960px){
-  body{
+@media screen and (min-width: 960px) {
+  body {
     font-size: 18px;
   }
 }
 
 //desktop style
-@media screen and (min-width: 1200px){
-  body{
+@media screen and (min-width: 1200px) {
+  body {
     font-size: 20px;
   }
 }
