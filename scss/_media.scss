@@ -3,10 +3,26 @@
   body {
     font-size: 17px;
   }
+
+  //Person SVG in home section
   .home-img {
     padding: 3rem;
-    //height: 70%;
-    //margin-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    font-size: 18px;
+  }
+
+  //Person SVG in home section
+  .home-img {
+    padding: 4rem;
+  }
+
+  //Each project in project section
+  .project {
+    width: 70%;
   }
 }
 
