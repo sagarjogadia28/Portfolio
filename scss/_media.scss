@@ -4,9 +4,19 @@
     font-size: 17px;
   }
 
-  //Person SVG in home section
-  .home-img {
+  //All the SVGs
+  .svg-img {
     padding: 3rem;
+  }
+}
+
+@media screen and (min-width: 670px) {
+  .svg-img {
+    padding: 4rem;
+  }
+
+  .card h3 {
+    margin: 1.5rem 2rem;
   }
 }
 
@@ -15,14 +25,42 @@
     font-size: 18px;
   }
 
-  //Person SVG in home section
-  .home-img {
-    padding: 4rem;
+  //All the SVGs
+  .svg-img {
+    padding: 2rem 5rem;
   }
 
   //Each project in project section
   .project {
-    width: 70%;
+    width: 65%;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .svg-img {
+    padding: 2rem 6rem;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+
+  .glider {
+    margin: auto 4rem;
+  }
+
+  .arrow {
+    filter: invert(100%);
+    transform: scale(1.3) translateY(-50%);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .arrow:hover {
+    transform: scale(1.4) translateY(-50%);
   }
 }
 

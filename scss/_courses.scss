@@ -1,10 +1,14 @@
-#courses{
+#courses {
   width: 90%;
   margin: auto;
 }
 
-.card{
-  padding: 2rem;
+.glider-contain {
+  position: relative;
+}
+
+.card {
+  padding: 1rem;
   border-radius: 20px;
   text-align: center;
   color: white;
