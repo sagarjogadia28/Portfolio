@@ -829,39 +829,8 @@ footer {
     padding: 2rem 8rem;
   }
 
-  .hamburger-menu {
+  header {
     display: none;
-  }
-
-  .nav-links {
-    height: 10vh;
-    background: white;
-    opacity: 1;
-    flex-direction: row;
-    clip-path: none;
-    align-items: center;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1), 0 20px 20px rgba(0, 0, 0, 0.1);
-    pointer-events: auto;
-  }
-  .nav-links li {
-    opacity: 1;
-  }
-  .nav-links a {
-    color: black;
-  }
-  .nav-links .active-box {
-    background-color: #ED6663;
-    z-index: -2;
-    transform: scale(2);
-    transition: all 0.5s ease;
-    border-radius: 1rem;
-    position: absolute;
-  }
-  .nav-links a:hover {
-    transform: none;
-  }
-  .nav-links body.prevent-scroll {
-    overflow: visible;
   }
 }
 @media screen and (min-width: 960px) {

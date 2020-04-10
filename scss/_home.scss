@@ -10,9 +10,7 @@ body.prevent-scroll {
   overflow: hidden;
 }
 
-
 .nav-links {
-  //display: none;
   position: fixed;
   background: linear-gradient(to bottom, $primary-color, $secondary-color);
   height: 100vh;
