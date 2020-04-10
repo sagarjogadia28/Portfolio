@@ -434,6 +434,7 @@ body.prevent-scroll {
 #work-exp .companies h3 {
   font-family: "Montserrat-Bold", sans-serif;
   margin: 1.2rem 0 0.2rem 0;
+  font-size: 1.4rem;
 }
 
 .light-window {
@@ -817,6 +818,50 @@ footer {
 
   .arrow:hover {
     transform: scale(1.4) translateY(-50%);
+  }
+
+  .project {
+    width: 55%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .svg-img {
+    padding: 2rem 8rem;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  .nav-links {
+    height: 10vh;
+    background: white;
+    opacity: 1;
+    flex-direction: row;
+    clip-path: none;
+    align-items: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1), 0 20px 20px rgba(0, 0, 0, 0.1);
+    pointer-events: auto;
+  }
+  .nav-links li {
+    opacity: 1;
+  }
+  .nav-links a {
+    color: black;
+  }
+  .nav-links .active-box {
+    background-color: #ED6663;
+    z-index: -2;
+    transform: scale(2);
+    transition: all 0.5s ease;
+    border-radius: 1rem;
+    position: absolute;
+  }
+  .nav-links a:hover {
+    transform: none;
+  }
+  .nav-links body.prevent-scroll {
+    overflow: visible;
   }
 }
 @media screen and (min-width: 960px) {

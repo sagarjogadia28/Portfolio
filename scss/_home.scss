@@ -37,7 +37,6 @@ body.prevent-scroll {
     opacity: 1;
   }
 
-
   a {
     display: inline-block;
     font-size: 1.4rem;
@@ -103,16 +102,17 @@ body.prevent-scroll {
   margin: 0.5rem 0 2rem 0;
   letter-spacing: 4px;
 }
-.home-social{
-  a{
+
+.home-social {
+  a {
     margin: 1rem;
   }
 
-  img{
+  img {
     transition: all 0.3s ease-in;
   }
 
-  a:hover img, a:focus img{
+  a:hover img, a:focus img {
     transform: scale(1.1);
   }
 

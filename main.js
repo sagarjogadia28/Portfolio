@@ -12,7 +12,8 @@ burger.addEventListener("click", () => {
 
 aLinks.forEach(link => {
     link.addEventListener("click", () => {
-        changeClass();
+        if (getComputedStyle(burger, null).display !== "none")
+            changeClass();
     })
 });
 
@@ -132,3 +133,35 @@ let projects = document.querySelectorAll(".project");
 projects.forEach(section => {
     observer.observe(section);
 });
+
+/****************** NAVIGATION MENU ACTIVE BOX ******************/
+const sections = document.querySelectorAll("section");
+const activeBox = document.querySelector(".active-box");
+const activeOptions = {
+    threshold: 0.1
+};
+
+let activeObserver = new IntersectionObserver(activeCheck, activeOptions);
+sections.forEach(section => {
+    activeObserver.observe(section);
+});
+
+function activeCheck(entries) {
+    entries.forEach(entry => {
+        const className = entry.target.id;
+        if (entry.isIntersecting) {
+            const activeAnchor = document.querySelector(`[data-page=${className}]`);
+            const coords = activeAnchor.getBoundingClientRect();
+            const directions = {
+                height: coords.height,
+                width: coords.width,
+                left: coords.left,
+                right: coords.right
+            };
+            activeBox.style.setProperty('left', `${directions.left}px`);
+            activeBox.style.setProperty('top', `${directions.top}px`);
+            activeBox.style.setProperty('width', `${directions.width}px`);
+            activeBox.style.setProperty('height', `${directions.height}px`);
+        }
+    });
+}
