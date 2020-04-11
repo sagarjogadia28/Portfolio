@@ -76,6 +76,7 @@ h4 {
   padding: 4rem 0;
   text-align: center;
   text-transform: uppercase;
+  grid-column: span 8;
 }
 
 .page-heading::after {
@@ -365,8 +366,15 @@ body.prevent-scroll {
 
 .uwindsor, .svnit, .education-img {
   text-align: center;
-  grid-column: 1/9;
   margin-top: 3rem;
+}
+
+.education-img {
+  grid-column: span 9;
+}
+
+.about-institutions {
+  grid-column: span 9;
 }
 
 #education > div h2 {
@@ -395,12 +403,14 @@ body.prevent-scroll {
   text-align: center;
   margin: 4rem 0;
   font-weight: 600;
+  grid-column: span 8;
 }
 #work-exp p span {
   font-weight: 800;
 }
 #work-exp .work-exp-img {
   text-align: center;
+  grid-column: span 8;
 }
 #work-exp p, #work-exp .work-exp-img {
   opacity: 0;
@@ -581,18 +591,24 @@ body.prevent-scroll {
   overflow: hidden;
 }
 
+.row {
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  grid-gap: 3rem;
+  margin: 3rem 2rem;
+  justify-items: center;
+}
+
 .project {
   position: relative;
   border-radius: 50px;
   overflow: hidden;
-  width: 80%;
-  margin: 3rem auto;
+  max-width: 388px;
   display: none;
   transform: translateY(50%);
   opacity: 0;
   transition: all 1s ease-out;
   cursor: pointer;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3), 0 20px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
 }
 
 .overlay {
@@ -619,7 +635,7 @@ body.prevent-scroll {
   color: white;
   font-size: 1.2rem;
   border: 2px solid white;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem;
   transition: all 0.3s ease-in;
   z-index: 3;
   background-image: linear-gradient(to left, transparent, transparent 50%, #0F4C81 50%, #ED6663);
@@ -789,12 +805,16 @@ footer {
     padding: 2rem 5rem;
   }
 
-  .project {
-    width: 65%;
+  .row {
+    margin: 3rem 4rem;
   }
 
   .card {
     padding: 1.5rem;
+  }
+
+  .connect-info {
+    width: 80%;
   }
 }
 @media screen and (min-width: 800px) {
@@ -820,8 +840,8 @@ footer {
     transform: scale(1.4) translateY(-50%);
   }
 
-  .project {
-    width: 55%;
+  .row {
+    margin: 3rem 2rem;
   }
 }
 @media screen and (min-width: 900px) {
@@ -829,13 +849,127 @@ footer {
     padding: 2rem 8rem;
   }
 
+  .card {
+    padding: 3rem;
+    justify-content: space-between;
+  }
+  .card h3 {
+    font-size: 1.2rem;
+  }
+  .card p {
+    font-size: 1rem;
+  }
+  .card img {
+    transform: scale(1.2);
+  }
+
   header {
     display: none;
+  }
+
+  .row {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   }
 }
 @media screen and (min-width: 960px) {
   body {
     font-size: 18px;
+  }
+
+  .home-text {
+    grid-column: span 4;
+    align-self: center;
+    justify-content: start;
+    text-align: start;
+  }
+
+  .lg-heading {
+    margin-top: 0;
+    font-size: 2.9rem;
+  }
+
+  .sm-heading {
+    margin-left: 0;
+    font-size: 1.4rem;
+  }
+
+  .home-img {
+    grid-column: span 4;
+    padding: 0;
+    align-self: center;
+    transform: scale(1.2);
+  }
+
+  .home-social a {
+    margin-left: 0;
+    margin-right: 2.5rem;
+  }
+
+  #about {
+    grid-template-rows: 20% auto;
+  }
+
+  .about-text, .about-img {
+    grid-column: span 4;
+    align-self: center;
+    justify-content: start;
+  }
+
+  .about-text {
+    order: 2;
+  }
+
+  .about-img {
+    padding: 0;
+    order: 1;
+  }
+
+  .page-heading {
+    grid-column: span 8;
+    font-size: 1.5rem;
+  }
+
+  .about-institutions, .education-img {
+    grid-column: span 4;
+    align-self: center;
+  }
+
+  .education-img {
+    padding: 0;
+    transform: scale(1.2);
+  }
+
+  #education .about-institutions {
+    opacity: 0;
+    transform: translate(-50%);
+    transition: all 1s ease-out;
+  }
+
+  #work-exp p {
+    opacity: 0;
+    transform: translate(50%);
+    transition: all 1s ease-out;
+  }
+
+  #work-exp p, #work-exp .work-exp-img {
+    grid-column: span 4;
+    align-self: center;
+  }
+  #work-exp p {
+    order: 2;
+    margin-left: 1rem;
+  }
+  #work-exp .work-exp-img {
+    order: 1;
+    padding: 0;
+    transform: scale(1.2);
+  }
+  #work-exp .companies {
+    margin-top: 4rem;
+  }
+
+  .row {
+    grid-gap: 3rem;
   }
 }
 @media screen and (min-width: 1200px) {

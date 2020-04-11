@@ -1,7 +1,15 @@
 .uwindsor, .svnit, .education-img {
   text-align: center;
-  grid-column: 1/9;
+  //grid-column: 1/9;
   margin-top: 3rem;
+}
+
+.education-img {
+  grid-column: span 9;
+}
+
+.about-institutions {
+  grid-column: span 9;
 }
 
 //.education-img {

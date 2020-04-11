@@ -4,6 +4,7 @@
     text-align: center;
     margin: 4rem 0;
     font-weight: 600;
+    grid-column: span 8;
 
 
     span {
@@ -13,6 +14,7 @@
 
   .work-exp-img {
     text-align: center;
+    grid-column: span 8;
     //padding: 2rem;
   }
 

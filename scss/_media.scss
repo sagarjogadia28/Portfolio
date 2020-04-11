@@ -1,4 +1,3 @@
-//small tablet style
 @media screen and (min-width: 620px) {
   body {
     font-size: 17px;
@@ -11,10 +10,12 @@
 }
 
 @media screen and (min-width: 670px) {
+  //All the SVGs
   .svg-img {
     padding: 4rem;
   }
 
+  //Change the course card
   .card h3 {
     margin: 1.5rem 2rem;
   }
@@ -31,58 +32,189 @@
   }
 
   //Each project in project section
-  .project {
-    width: 65%;
+  //.project {
+  //  width: 65%;
+  //}
+  .row {
+    margin: 3rem 4rem;
   }
 
+  //Change the course card
   .card {
     padding: 1.5rem;
+  }
+
+  .connect-info {
+    width: 80%;
   }
 }
 
 @media screen and (min-width: 800px) {
+  //All the SVGs
   .svg-img {
     padding: 2rem 6rem;
   }
 
+  //Change the course card
   .card {
     padding: 2rem;
   }
-
   .glider {
     margin: auto 4rem;
   }
-
   .arrow {
     filter: invert(100%);
     transform: scale(1.3) translateY(-50%);
     transition: transform 0.4s ease-in-out;
   }
-
   .arrow:hover {
     transform: scale(1.4) translateY(-50%);
   }
 
   //Each project in project section
-  .project {
-    width: 55%;
+  //.project {
+  //  width: 55%;
+  //}
+  .row {
+    margin: 3rem 2rem;
   }
 }
 
 @media screen and (min-width: 900px) {
+  //All the SVGs
   .svg-img {
     padding: 2rem 8rem;
   }
 
+  //Change the course card
+  .card {
+    padding: 3rem;
+    justify-content: space-between;
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    img {
+      transform: scale(1.2);
+    }
+  }
+
+  //Hide the header
   header {
     display: none;
   }
+
+  .row {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
 }
 
-//large tablet and laptop style
 @media screen and (min-width: 960px) {
   body {
     font-size: 18px;
+  }
+
+  //Change the home section
+  .home-text {
+    grid-column: span 4;
+    align-self: center;
+    justify-content: start;
+    text-align: start;
+  }
+
+  .lg-heading {
+    margin-top: 0;
+    font-size: 2.9rem;
+  }
+
+  .sm-heading {
+    margin-left: 0;
+    font-size: 1.4rem;
+  }
+
+  .home-img {
+    grid-column: span 4;
+    padding: 0;
+    align-self: center;
+    transform: scale(1.2);
+  }
+
+  .home-social a {
+    margin-left: 0;
+    margin-right: 2.5rem;
+  }
+
+  //Change the about section
+  #about {
+    grid-template-rows: 20% auto;
+  }
+  .about-text, .about-img {
+    grid-column: span 4;
+    align-self: center;
+    justify-content: start;
+  }
+  .about-text {
+    order: 2;
+  }
+  .about-img {
+    padding: 0;
+    order: 1;
+  }
+  .page-heading {
+    grid-column: span 8;
+    font-size: 1.5rem;
+  }
+
+  //Change the education section
+  .about-institutions, .education-img {
+    grid-column: span 4;
+    align-self: center;
+  }
+
+  .education-img {
+    padding: 0;
+    transform: scale(1.2);
+  }
+
+  #education .about-institutions {
+    @include animateToX(-50%);
+  }
+
+  #work-exp p {
+    @include animateToX(50%);
+  }
+
+  //Change the work-experience section
+  #work-exp {
+    p, .work-exp-img {
+      grid-column: span 4;
+      align-self: center;
+    }
+
+    p {
+      order: 2;
+      margin-left: 1rem;
+    }
+
+    .work-exp-img {
+      order: 1;
+      padding: 0;
+      transform: scale(1.2);
+    }
+
+    .companies {
+      margin-top: 4rem;
+    }
+  }
+
+  //Change the Projects section
+  .row {
+    grid-gap: 3rem;
   }
 }
 
