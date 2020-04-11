@@ -1,5 +1,4 @@
 /****************** NAVIGATION MENU ******************/
-
 const burger = document.querySelector(".hamburger-menu");
 const body = document.querySelector("body");
 const navLinks = document.querySelector(".nav-links");
@@ -109,6 +108,12 @@ observer = new IntersectionObserver(entries => {
         }
     });
 }, options);
+
+let aboutText = document.querySelector(".about-text");
+observer.observe(aboutText);
+
+let aboutImage = document.querySelector(".about-img");
+observer.observe(aboutImage);
 
 let educationSection = document.querySelectorAll("#education > div");
 educationSection.forEach(section => {

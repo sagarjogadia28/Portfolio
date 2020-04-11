@@ -37,3 +37,11 @@
   text-align: center;
   //padding: 2rem;
 }
+
+.about-text, .about-img {
+  @include animateToX(-50%);
+}
+
+.about-text.slide-in, .about-img.slide-in {
+  @include animateToOriginal;
+}

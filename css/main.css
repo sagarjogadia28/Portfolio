@@ -93,6 +93,10 @@ h4 {
   width: 15%;
 }
 
+.exp-heading {
+  padding: 0;
+}
+
 body.prevent-scroll {
   overflow: hidden;
 }
@@ -362,6 +366,17 @@ body.prevent-scroll {
   margin-top: 1rem;
   grid-column: 1/9;
   text-align: center;
+}
+
+.about-text, .about-img {
+  opacity: 0;
+  transform: translate(-50%);
+  transition: all 1s ease-out;
+}
+
+.about-text.slide-in, .about-img.slide-in {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .uwindsor, .svnit, .education-img {
@@ -917,6 +932,9 @@ footer {
 
   .about-text {
     order: 2;
+    opacity: 0;
+    transform: translate(50%);
+    transition: all 1s ease-out;
   }
 
   .about-img {

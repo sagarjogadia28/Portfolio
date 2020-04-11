@@ -119,6 +119,7 @@
     font-size: 18px;
   }
 
+
   //Change the home section
   .home-text {
     grid-column: span 4;
@@ -160,6 +161,7 @@
   }
   .about-text {
     order: 2;
+    @include animateToX(50%);
   }
   .about-img {
     padding: 0;
