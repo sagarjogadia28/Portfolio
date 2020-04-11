@@ -5,9 +5,11 @@
 
 .glider-contain {
   position: relative;
+  max-width: 900px;
 }
 
 .card {
+  max-width: 900px;
   padding: 1rem;
   border-radius: 20px;
   text-align: center;

@@ -220,9 +220,101 @@
   }
 }
 
+@media screen and (min-width: 1084px) {
+  .lg-heading {
+    font-size: 3.2rem;
+  }
+
+  .sm-heading {
+    font-size: 1.7rem;
+  }
+
+  .card {
+    padding: 4rem;
+  }
+
+  .arrow {
+    //background-color: $secondary-color;
+    //border-radius: 50%;
+    //filter: none;
+    //padding: 0.4rem;
+  }
+
+  .right-arrow {
+    right: 0;
+  }
+
+  .left-arrow {
+    left: 0;
+  }
+
+  #work-exp .companies {
+    margin-top: 6rem;
+    align-items: flex-end;
+
+    .company:nth-child(1) {
+      transition: all 1s ease-out 0.1s;
+    }
+
+    .company:nth-child(2) {
+      transition: all 1s ease-out 0.3s;
+    }
+
+    .company:nth-child(3) {
+      transition: all 1s ease-out 0.5s;
+    }
+  }
+}
+
 //desktop style
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1250px) {
   body {
-    font-size: 20px;
+    font-size: 24px;
+  }
+
+  .home-text {
+    grid-column: span 5;
+  }
+
+  .lg-heading {
+    font-size: 4rem;
+  }
+
+  .sm-heading {
+    font-size: 2.2rem;
+  }
+
+  .home-img {
+    grid-column: span 3;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .home-text {
+    margin-left: 4rem;
+  }
+
+  .home-social {
+    margin-top: 4rem;
+
+    img {
+      transform: scale(1.2);
+    }
+
+    a:hover img, a:focus img {
+      transform: scale(1.3);
+    }
+  }
+
+  .home-img {
+    grid-column: span 3;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .connect-info {
+    width: 50%;
   }
 }
