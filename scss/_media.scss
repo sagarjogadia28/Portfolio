@@ -31,10 +31,6 @@
     padding: 2rem 5rem;
   }
 
-  //Each project in project section
-  //.project {
-  //  width: 65%;
-  //}
   .row {
     margin: 3rem 4rem;
   }
@@ -71,10 +67,6 @@
     transform: scale(1.4) translateY(-50%);
   }
 
-  //Each project in project section
-  //.project {
-  //  width: 55%;
-  //}
   .row {
     margin: 3rem 2rem;
   }
@@ -119,6 +111,14 @@
     font-size: 18px;
   }
 
+  #myBtnContainer {
+    margin: 0 6rem;
+  }
+
+  .svg-img {
+    padding: 0;
+    transform: scale(1.2);
+  }
 
   //Change the home section
   .home-text {
@@ -140,9 +140,7 @@
 
   .home-img {
     grid-column: span 4;
-    padding: 0;
     align-self: center;
-    transform: scale(1.2);
   }
 
   .home-social a {
@@ -164,8 +162,8 @@
     @include animateToX(50%);
   }
   .about-img {
-    padding: 0;
     order: 1;
+    @include animateToX(-50%);
   }
   .page-heading {
     grid-column: span 8;
@@ -176,11 +174,6 @@
   .about-institutions, .education-img {
     grid-column: span 4;
     align-self: center;
-  }
-
-  .education-img {
-    padding: 0;
-    transform: scale(1.2);
   }
 
   #education .about-institutions {
@@ -205,8 +198,6 @@
 
     .work-exp-img {
       order: 1;
-      padding: 0;
-      transform: scale(1.2);
     }
 
     .companies {
@@ -231,13 +222,6 @@
 
   .card {
     padding: 4rem;
-  }
-
-  .arrow {
-    //background-color: $secondary-color;
-    //border-radius: 50%;
-    //filter: none;
-    //padding: 0.4rem;
   }
 
   .right-arrow {

@@ -3,9 +3,6 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
   @include animateToX(50%);
-  //transform: translateX(50%);
-  //opacity: 0;
-  //transition: all 1s ease-out;
 
   img {
     justify-self: center;
@@ -14,6 +11,4 @@
 
 .skills-grid.slide-in {
   @include animateToOriginal;
-  //transform: translateX(0);
-  //opacity: 1;
 }

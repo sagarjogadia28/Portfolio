@@ -94,6 +94,7 @@ h4 {
 }
 
 .exp-heading {
+  margin-top: 4rem;
   padding: 0;
 }
 
@@ -897,6 +898,15 @@ footer {
     font-size: 18px;
   }
 
+  #myBtnContainer {
+    margin: 0 6rem;
+  }
+
+  .svg-img {
+    padding: 0;
+    transform: scale(1.2);
+  }
+
   .home-text {
     grid-column: span 4;
     align-self: center;
@@ -916,9 +926,7 @@ footer {
 
   .home-img {
     grid-column: span 4;
-    padding: 0;
     align-self: center;
-    transform: scale(1.2);
   }
 
   .home-social a {
@@ -944,8 +952,10 @@ footer {
   }
 
   .about-img {
-    padding: 0;
     order: 1;
+    opacity: 0;
+    transform: translate(-50%);
+    transition: all 1s ease-out;
   }
 
   .page-heading {
@@ -956,11 +966,6 @@ footer {
   .about-institutions, .education-img {
     grid-column: span 4;
     align-self: center;
-  }
-
-  .education-img {
-    padding: 0;
-    transform: scale(1.2);
   }
 
   #education .about-institutions {
@@ -985,8 +990,6 @@ footer {
   }
   #work-exp .work-exp-img {
     order: 1;
-    padding: 0;
-    transform: scale(1.2);
   }
   #work-exp .companies {
     margin-top: 4rem;

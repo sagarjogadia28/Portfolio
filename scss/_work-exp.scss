@@ -15,7 +15,6 @@
   .work-exp-img {
     text-align: center;
     grid-column: span 8;
-    //padding: 2rem;
   }
 
   p, .work-exp-img {
@@ -45,8 +44,6 @@
 
     .company.slide-in{
       @include animateToOriginal;
-      //transform: translateY(0);
-      //opacity: 1;
     }
 
     h3 {

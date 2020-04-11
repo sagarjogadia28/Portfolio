@@ -21,7 +21,6 @@
 }
 .glider.draggable {
   user-select: none;
-  cursor: -webkit-grab;
   cursor: grab;
 }
 .glider.draggable .glider-slide img {

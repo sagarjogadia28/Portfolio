@@ -1,6 +1,5 @@
 .uwindsor, .svnit, .education-img {
   text-align: center;
-  //grid-column: 1/9;
   margin-top: 3rem;
 }
 
@@ -11,10 +10,6 @@
 .about-institutions {
   grid-column: span 9;
 }
-
-//.education-img {
-//  padding: 2rem;
-//}
 
 #education > div h2 {
   font-family: "Montserrat-Bold", sans-serif;
@@ -28,13 +23,8 @@
 
 #education > div{
   @include animateToX(50%);
-  //transform: translateX(50%);
-  //opacity: 0;
-  //transition: all 1s ease-out;
 }
 
 #education > div.slide-in{
   @include animateToOriginal;
-  //transform: translateX(0);
-  //opacity: 1;
 }
