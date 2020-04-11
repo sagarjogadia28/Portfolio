@@ -548,6 +548,10 @@ body.prevent-scroll {
   max-width: 900px;
 }
 
+.glider {
+  overflow-x: hidden;
+}
+
 .card {
   max-width: 900px;
   padding: 1rem;
