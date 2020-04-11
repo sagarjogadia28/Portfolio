@@ -1,30 +1,3 @@
-/****************** NAVIGATION MENU ******************/
-const burger = document.querySelector(".hamburger-menu");
-const body = document.querySelector("body");
-const navLinks = document.querySelector(".nav-links");
-const links = navLinks.querySelectorAll("li");
-const aLinks = navLinks.querySelectorAll("a");
-
-burger.addEventListener("click", () => {
-    changeClass();
-});
-
-aLinks.forEach(link => {
-    link.addEventListener("click", () => {
-        if (getComputedStyle(burger, null).display !== "none")
-            changeClass();
-    })
-});
-
-function changeClass() {
-    body.classList.toggle("prevent-scroll");
-    burger.classList.toggle("toggle");
-    navLinks.classList.toggle("open");
-    links.forEach(link => {
-        link.classList.toggle("fade");
-    })
-}
-
 /****************** PROJECT MENU ******************/
 const allProjects = document.getElementsByClassName("project");
 mySelection('all'); // Execute the function and show all columns
