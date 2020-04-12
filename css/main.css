@@ -263,6 +263,9 @@ body.prevent-scroll {
   font-weight: 600;
 }
 .about-text input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   margin: 2rem 0;
   color: white;
   background: rgba(15, 76, 129, 0.8);
