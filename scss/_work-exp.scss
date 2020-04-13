@@ -24,35 +24,36 @@
   p.slide-in, .work-exp-img.slide-in {
     @include animateToOriginal;
   }
+}
 
-  .companies {
+.companies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+
+  .company {
+    flex: 1 1 21rem;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 0;
+    transform: translateY(50%);
+    opacity: 0;
+    transition: all 1s ease-out;
+  }
 
-    .company {
-      flex: 1 1 21rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 3rem 0;
-      transform: translateY(50%);
-      opacity: 0;
-      transition: all 1s ease-out;
-    }
+  .company.slide-in {
+    @include animateToOriginal;
+  }
 
-    .company.slide-in{
-      @include animateToOriginal;
-    }
-
-    h3 {
-      font-family: "Montserrat-Bold", sans-serif;
-      margin: 1.2rem 0 0.2rem 0;
-      font-size: 1.4rem;
-    }
+  h3 {
+    font-family: "Montserrat-Bold", sans-serif;
+    margin: 1.2rem 0 0.2rem 0;
+    font-size: 1.4rem;
   }
 }
+
 
 .light-window {
   animation: night-window-light 4s ease-in-out infinite alternate 3s;
@@ -70,7 +71,7 @@
   animation: night-window-opacity 4s ease-in-out infinite alternate 3s;
 }
 
-#coder{
+#coder {
   animation: person 1.5s ease-in-out infinite alternate;
   transform-origin: bottom;
 }

@@ -90,37 +90,21 @@ h4 {
 }
 
 .page-heading:hover::after {
-    width: 15%;
+  width: 15%;
 }
 
 .exp-heading {
-    margin-top: 4rem;
-    padding: 0;
-}
-
-object {
-    width: 100%;
-    display: block;
-    height: auto;
-    position: relative;
-    padding-top: 100%;
-}
-
-object svg {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+  margin-top: 4rem;
+  padding: 0;
 }
 
 body.prevent-scroll {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 #home {
-    position: relative;
-    min-height: 100vh;
+  position: relative;
+  min-height: 100vh;
 }
 
 .home-text {
@@ -129,7 +113,7 @@ body.prevent-scroll {
 }
 
 .home-img {
-  margin-top: 3.5rem;
+  margin-top: 1rem;
   grid-column: 1/9;
   text-align: center;
 }
@@ -361,22 +345,26 @@ body.prevent-scroll {
   text-align: center;
   grid-column: span 8;
 }
+
 #work-exp p, #work-exp .work-exp-img {
   opacity: 0;
   transform: translate(-50%);
   transition: all 1s ease-out;
 }
+
 #work-exp p.slide-in, #work-exp .work-exp-img.slide-in {
   transform: translate(0, 0);
   opacity: 1;
 }
-#work-exp .companies {
+
+.companies {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
 }
-#work-exp .companies .company {
+
+.companies .company {
   flex: 1 1 21rem;
   display: flex;
   flex-direction: column;
@@ -386,11 +374,13 @@ body.prevent-scroll {
   opacity: 0;
   transition: all 1s ease-out;
 }
-#work-exp .companies .company.slide-in {
+
+.companies .company.slide-in {
   transform: translate(0, 0);
   opacity: 1;
 }
-#work-exp .companies h3 {
+
+.companies h3 {
   font-family: "Montserrat-Bold", sans-serif;
   margin: 1.2rem 0 0.2rem 0;
   font-size: 1.4rem;
@@ -731,6 +721,24 @@ footer {
   text-align: center;
   font-size: 0.8rem;
   padding: 0.4rem 0;
+}
+
+@media screen and (max-width: 371px) {
+  .companies .company h3 {
+    font-size: 1.2rem;
+  }
+
+  .companies .company h4 {
+    font-size: 1rem;
+  }
+
+  #education > div h2 {
+    font-size: 1.2rem;
+  }
+
+  #education > div p {
+    font-size: 0.8rem;
+  }
 }
 
 @media screen and (min-width: 620px) {
