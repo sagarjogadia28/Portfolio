@@ -236,7 +236,6 @@ h4 {
     transform: rotateZ(0.6deg);
   }
 }
-
 @keyframes person-neck {
   from {
     transform: rotateZ(-0.3deg);
@@ -245,21 +244,14 @@ h4 {
     transform: rotateZ(0.3deg);
   }
 }
-
-#about {
-  height: 100vh;
-  overflow: hidden;
-}
-
 .about-text {
   text-align: center;
   grid-column: 1/9;
 }
-
 .about-text h1 {
   font-family: "Montserrat-Bold", sans-serif;
   font-size: 2.4rem;
-  margin: 1rem 0 2rem 0;
+  margin: 2rem 0;
 }
 .about-text p {
   letter-spacing: 2px;
@@ -301,18 +293,9 @@ h4 {
   opacity: 1;
 }
 
-#education {
-  height: 100vh;
-  overflow: hidden;
-}
-
-#education .page-heading {
-  margin-top: 1rem;
-}
-
 .uwindsor, .svnit {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .education-img {
@@ -320,7 +303,6 @@ h4 {
 }
 
 .education-img {
-  margin-top: 2rem;
   grid-column: span 9;
 }
 
@@ -349,45 +331,32 @@ h4 {
   opacity: 1;
 }
 
-#work-exp-content {
-  height: 100vh;
-  overflow: hidden;
-}
-
-#work-exp-content p {
+#work-exp p {
   letter-spacing: 2px;
   text-align: center;
   margin: 4rem 0;
   font-weight: 600;
   grid-column: span 8;
-  opacity: 0;
-  transform: translate(-50%);
-  transition: all 1s ease-out;
 }
 
-#work-exp-content p span {
+#work-exp p span {
   font-weight: 800;
 }
 
-#work-exp-content .work-exp-img {
+#work-exp .work-exp-img {
   text-align: center;
   grid-column: span 8;
 }
 
-#work-exp-content p, #work-exp-content .work-exp-img {
+#work-exp p, #work-exp .work-exp-img {
   opacity: 0;
   transform: translate(-50%);
   transition: all 1s ease-out;
 }
 
-#work-exp-content p.slide-in, #work-exp-content .work-exp-img.slide-in {
+#work-exp p.slide-in, #work-exp .work-exp-img.slide-in {
   transform: translate(0, 0);
   opacity: 1;
-}
-
-#work-exp-content .work-exp-details p, #work-exp-content .work-exp-details .work-exp-img {
-  display: flex;
-  margin: auto;
 }
 
 .companies {
@@ -396,7 +365,6 @@ h4 {
   justify-content: center;
   align-items: flex-start;
 }
-
 .companies .company {
   flex: 1 1 21rem;
   display: flex;
