@@ -65,6 +65,10 @@ h4 {
   margin: auto;
 }
 
+#home, #about, #education, #projects, #skills {
+  overflow-x: hidden;
+}
+
 .svg-img {
   padding: 1rem;
 }
@@ -338,22 +342,18 @@ h4 {
   font-weight: 600;
   grid-column: span 8;
 }
-
 #work-exp p span {
   font-weight: 800;
 }
-
 #work-exp .work-exp-img {
   text-align: center;
   grid-column: span 8;
 }
-
 #work-exp p, #work-exp .work-exp-img {
   opacity: 0;
   transform: translate(-50%);
   transition: all 1s ease-out;
 }
-
 #work-exp p.slide-in, #work-exp .work-exp-img.slide-in {
   transform: translate(0, 0);
   opacity: 1;
@@ -708,6 +708,10 @@ footer {
 }
 .email img, .phone img {
   margin-right: 2rem;
+}
+.email a, .phone a {
+  color: white;
+  text-decoration: none;
 }
 
 .copyright {
