@@ -297,9 +297,13 @@ body.prevent-scroll {
   opacity: 1;
 }
 
-.uwindsor, .svnit, .education-img {
+.uwindsor, .svnit {
   text-align: center;
   margin-top: 3rem;
+}
+
+.education-img {
+  text-align: center;
 }
 
 .education-img {
@@ -345,13 +349,11 @@ body.prevent-scroll {
   text-align: center;
   grid-column: span 8;
 }
-
 #work-exp p, #work-exp .work-exp-img {
   opacity: 0;
   transform: translate(-50%);
   transition: all 1s ease-out;
 }
-
 #work-exp p.slide-in, #work-exp .work-exp-img.slide-in {
   transform: translate(0, 0);
   opacity: 1;
@@ -363,7 +365,6 @@ body.prevent-scroll {
   justify-content: center;
   align-items: flex-start;
 }
-
 .companies .company {
   flex: 1 1 21rem;
   display: flex;
@@ -374,12 +375,10 @@ body.prevent-scroll {
   opacity: 0;
   transition: all 1s ease-out;
 }
-
 .companies .company.slide-in {
   transform: translate(0, 0);
   opacity: 1;
 }
-
 .companies h3 {
   font-family: "Montserrat-Bold", sans-serif;
   margin: 1.2rem 0 0.2rem 0;
@@ -723,11 +722,10 @@ footer {
   padding: 0.4rem 0;
 }
 
-@media screen and (max-width: 371px) {
+@media screen and (max-width: 390px) {
   .companies .company h3 {
     font-size: 1.2rem;
   }
-
   .companies .company h4 {
     font-size: 1rem;
   }
@@ -740,7 +738,6 @@ footer {
     font-size: 0.8rem;
   }
 }
-
 @media screen and (min-width: 620px) {
   body {
     font-size: 17px;
