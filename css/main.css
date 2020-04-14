@@ -66,7 +66,7 @@ h4 {
 }
 
 .svg-img {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .page-heading {
@@ -98,10 +98,6 @@ h4 {
   padding: 0;
 }
 
-body.prevent-scroll {
-  overflow: hidden;
-}
-
 #home {
   position: relative;
   min-height: 100vh;
@@ -121,7 +117,7 @@ body.prevent-scroll {
 .lg-heading {
   font-family: "Montserrat-Bold", sans-serif;
   background: linear-gradient(to left, #0F4C81, #ED6663);
-  margin-top: 10rem;
+  margin-top: 8rem;
   font-size: 2.5rem;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -240,6 +236,7 @@ body.prevent-scroll {
     transform: rotateZ(0.6deg);
   }
 }
+
 @keyframes person-neck {
   from {
     transform: rotateZ(-0.3deg);
@@ -248,14 +245,21 @@ body.prevent-scroll {
     transform: rotateZ(0.3deg);
   }
 }
+
+#about {
+  height: 100vh;
+  overflow: hidden;
+}
+
 .about-text {
   text-align: center;
   grid-column: 1/9;
 }
+
 .about-text h1 {
   font-family: "Montserrat-Bold", sans-serif;
   font-size: 2.4rem;
-  margin: 2rem 0;
+  margin: 1rem 0 2rem 0;
 }
 .about-text p {
   letter-spacing: 2px;
@@ -297,9 +301,18 @@ body.prevent-scroll {
   opacity: 1;
 }
 
+#education {
+  height: 100vh;
+  overflow: hidden;
+}
+
+#education .page-heading {
+  margin-top: 1rem;
+}
+
 .uwindsor, .svnit {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .education-img {
@@ -307,6 +320,7 @@ body.prevent-scroll {
 }
 
 .education-img {
+  margin-top: 2rem;
   grid-column: span 9;
 }
 
@@ -335,28 +349,45 @@ body.prevent-scroll {
   opacity: 1;
 }
 
-#work-exp p {
+#work-exp-content {
+  height: 100vh;
+  overflow: hidden;
+}
+
+#work-exp-content p {
   letter-spacing: 2px;
   text-align: center;
   margin: 4rem 0;
   font-weight: 600;
   grid-column: span 8;
-}
-#work-exp p span {
-  font-weight: 800;
-}
-#work-exp .work-exp-img {
-  text-align: center;
-  grid-column: span 8;
-}
-#work-exp p, #work-exp .work-exp-img {
   opacity: 0;
   transform: translate(-50%);
   transition: all 1s ease-out;
 }
-#work-exp p.slide-in, #work-exp .work-exp-img.slide-in {
+
+#work-exp-content p span {
+  font-weight: 800;
+}
+
+#work-exp-content .work-exp-img {
+  text-align: center;
+  grid-column: span 8;
+}
+
+#work-exp-content p, #work-exp-content .work-exp-img {
+  opacity: 0;
+  transform: translate(-50%);
+  transition: all 1s ease-out;
+}
+
+#work-exp-content p.slide-in, #work-exp-content .work-exp-img.slide-in {
   transform: translate(0, 0);
   opacity: 1;
+}
+
+#work-exp-content .work-exp-details p, #work-exp-content .work-exp-details .work-exp-img {
+  display: flex;
+  margin: auto;
 }
 
 .companies {
@@ -365,6 +396,7 @@ body.prevent-scroll {
   justify-content: center;
   align-items: flex-start;
 }
+
 .companies .company {
   flex: 1 1 21rem;
   display: flex;

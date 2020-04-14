@@ -1,7 +1,3 @@
-body.prevent-scroll {
-  overflow: hidden;
-}
-
 #home {
   position: relative;
   min-height: 100vh;
@@ -21,7 +17,7 @@ body.prevent-scroll {
 .lg-heading {
   font-family: "Montserrat-Bold", sans-serif;
   background: $gradient;
-  margin-top: 10rem;
+  margin-top: 8rem;
   font-size: 2.5rem;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
