@@ -6,6 +6,9 @@ footer {
   width: 90%;
   margin: auto;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 
   h3::after {
@@ -30,33 +33,38 @@ footer {
 
 .social-icons {
   display: flex;
+  width: 80%;
+  justify-content: space-evenly;
   align-items: center;
-  justify-items: center;
-  justify-content: space-between;
   margin: 1rem auto;
-  width: 50%;
 }
 
 .connect-info {
-  display: flex;
-  flex-direction: column;
-  margin: 1rem auto;
-  align-items: center;
+  display: table;
+}
+
+.connect-info > div {
+  display: table-row;
+  margin: 2rem;
+}
+
+.connect-info > div > div {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .email, .phone {
-  display: flex;
-  margin: 0.4rem;
-  width: 60%;
-  justify-content: flex-start;
 
   img {
-    margin-right: 2rem;
+    margin: 0.4rem 1rem;
   }
 
   a {
     color: white;
     text-decoration: none;
+    display: table-cell;
+
   }
 }
 
@@ -65,7 +73,7 @@ footer {
 
   p {
     font-family: "Montserrat-Bold", sans-serif;
-    margin: 0;
+    margin-top: 1rem;
     color: white;
     text-align: center;
     font-size: 0.8rem;

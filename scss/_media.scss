@@ -60,10 +60,6 @@
   .card {
     padding: 1.5rem;
   }
-
-  .connect-info {
-    width: 80%;
-  }
 }
 
 @media screen and (min-width: 800px) {
@@ -317,9 +313,5 @@
 
   .skills-grid {
     grid-template-columns: repeat(4, 1fr);
-  }
-
-  .connect-info {
-    width: 50%;
   }
 }

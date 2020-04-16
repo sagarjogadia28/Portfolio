@@ -661,10 +661,13 @@ footer {
 }
 
 .footer-content {
-  width: 90%;
-  margin: auto;
-  color: white;
-  text-align: center;
+    width: 90%;
+    margin: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 .footer-content h3::after {
   display: block;
@@ -685,45 +688,47 @@ footer {
 }
 
 .social-icons {
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  justify-content: space-between;
-  margin: 1rem auto;
-  width: 50%;
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1rem auto;
 }
 
 .connect-info {
-  display: flex;
-  flex-direction: column;
-  margin: 1rem auto;
-  align-items: center;
+    display: table;
 }
 
-.email, .phone {
-  display: flex;
-  margin: 0.4rem;
-  width: 60%;
-  justify-content: flex-start;
+.connect-info > div {
+    display: table-row;
+    margin: 2rem;
 }
+
+.connect-info > div > div {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
 .email img, .phone img {
-  margin-right: 2rem;
+    margin: 0.4rem 1rem;
 }
 .email a, .phone a {
-  color: white;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
+    display: table-cell;
 }
 
 .copyright {
   background: #ED6663;
 }
 .copyright p {
-  font-family: "Montserrat-Bold", sans-serif;
-  margin: 0;
-  color: white;
-  text-align: center;
-  font-size: 0.8rem;
-  padding: 0.4rem 0;
+    font-family: "Montserrat-Bold", sans-serif;
+    margin-top: 1rem;
+    color: white;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 0.4rem 0;
 }
 
 @media screen and (max-width: 390px) {
@@ -775,10 +780,6 @@ footer {
 
   .card {
     padding: 1.5rem;
-  }
-
-  .connect-info {
-    width: 80%;
   }
 }
 @media screen and (min-width: 800px) {
@@ -1018,10 +1019,6 @@ footer {
 
   .skills-grid {
     grid-template-columns: repeat(4, 1fr);
-  }
-
-  .connect-info {
-    width: 50%;
   }
 }
 
